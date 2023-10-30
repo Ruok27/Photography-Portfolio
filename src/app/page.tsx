@@ -4,7 +4,7 @@ export default function Home() {
   return (
 
     <div>
-      <main className="text-red-500">
+      <main className="">
         <p>Placeholder for Main</p>
       </main>
       <footer>
