@@ -3,7 +3,7 @@ import { Tab } from '@headlessui/react';
 import Image from 'next/image'
 import Link from 'next/link'
 import Masonry from 'react-masonry-css'
-import ClassNames from "classnames"
+import ClassNames from "classNames"
 
 
 // Use custom fonts a custom background image and custom logo 
@@ -55,7 +55,7 @@ export default function Home() {
 
         </Link>
 
-        
+
       </header>
 
 
@@ -74,7 +74,7 @@ export default function Home() {
                 <Tab key={tab.key} className="p-2">
                   {({ selected }) => (
 
-                    <span className={ ClassNames ("uppercase text-lg",selected ? "text-white" : "text-stone-600")}
+                    <span className={ClassNames("uppercase text-lg", selected ? "text-white" : "text-stone-600")}
                     >{tab.display}
                     </span>
 
@@ -100,16 +100,16 @@ export default function Home() {
             </Tab.List>
             <Tab.Panels className="h-full  max-w-[900px] w-full p-2 sm:p-4 my-6">
               <Tab.Panel>
-<Masonry breakpointCols= {2} className='flex gap-4' columnClassName=''>
+                <Masonry breakpointCols={2} className='flex gap-4' columnClassName=''>
 
 
-<div id='box1' className='my-4'></div>
-<div id='box2' className='my-4'></div>
-<div id='box3' className='my-4'></div>
-<div id='box4' className='my-4'></div>
-<div id='box5' className='my-4'></div>
+                  <div id='box1' className='my-4'></div>
+                  <div id='box2' className='my-4'></div>
+                  <div id='box3' className='my-4'></div>
+                  <div id='box4' className='my-4'></div>
+                  <div id='box5' className='my-4'></div>
 
-</Masonry>
+                </Masonry>
 
 
 
