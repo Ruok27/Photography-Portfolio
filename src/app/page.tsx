@@ -3,7 +3,7 @@ import { Tab } from '@headlessui/react';
 import Image from 'next/image'
 import Link from 'next/link'
 import Masonry from 'react-masonry-css'
-import ClassNames from "classNames"
+import ClassNames from "classnames"
 
 
 // Use custom fonts a custom background image and custom logo 
