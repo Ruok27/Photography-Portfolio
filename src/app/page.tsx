@@ -4,6 +4,14 @@ import Image from 'next/image'
 import Link from 'next/link'
 import Masonry from 'react-masonry-css'
 import ClassNames from "classnames"
+import ocean1 from "../app/ocean1.jpg"
+import ocean2 from "../app/ocean2.jpg"
+import ocean3 from "../app/ocean3.jpg"
+import ocean4 from "../app/ocean4.jpg"
+import ocean5 from "../app/ocean5.jpg"
+
+import bgImage from "../app/cameraBG.jpg"
+
 
 
 // Use custom fonts a custom background image and custom logo 
@@ -29,20 +37,33 @@ const tabs = [
     display: "Forests"
 
   }
+];
 
 
-
+const images = [
+  ocean1, ocean2, ocean3, ocean4, ocean5
 
 ]
+
 
 export default function Home() {
   return (
 
-    <div className="h-full bg-[url('cameraBG.jpg')] bg-top bg-cover overflow-auto">
+    <div className="h-full overflow-auto">
+
+      <div className='fixed left-0 top-0 w-full h-full z-10 from-stone-900 bg-gradient-to-t'></div>
+
+<Image
+                      className='fixed left-0 top-0'
+                      src={bgImage}
+                      priority={true}
+                      alt="background-image"
+                      placeholder='blur'
+
+                    />
 
 
-
-      <header className='fixed bg-stone-900 top-0 w-full z-10 flex justify-between items-center h-[90px] px-10'>
+      <header className='fixed bg-stone-900 top-0 w-full z-30 flex justify-between items-center h-[90px] px-10'>
 
         {/* hamburger menu place holder
         <div className='text-transparent'>hm</div> */}
@@ -59,7 +80,7 @@ export default function Home() {
       </header>
 
 
-      <main className='pt-[110px] overflow-auto'>
+      <main className='relative pt-[110px] overflow-auto z-20'>
 
 
 
@@ -102,12 +123,23 @@ export default function Home() {
               <Tab.Panel>
                 <Masonry breakpointCols={2} className='flex gap-4' columnClassName=''>
 
+                  {images.map((image) => (
+                    <Image
+                      key={image.src}
+                      src={image}
+                      alt="placeholder"
+                      className='my-4'
+                      placeholder='blur'
+                    />
+                  ))}
 
-                  <div id='box1' className='my-4'></div>
-                  <div id='box2' className='my-4'></div>
-                  <div id='box3' className='my-4'></div>
-                  <div id='box4' className='my-4'></div>
-                  <div id='box5' className='my-4'></div>
+                  <Image src={ocean1} alt="picture" className='my-4' />
+                  <Image src={ocean2} alt="picture" className='my-4' />
+                  <Image src={ocean3} alt="picture" className='my-4' />
+                  <Image src={ocean4} alt="picture" className='my-4' />
+                  <Image src={ocean5} alt="picture" className='my-4' />
+
+
 
                 </Masonry>
 
@@ -122,7 +154,7 @@ export default function Home() {
 
 
       </main>
-      <footer className='h-[90px] flex justify-center items-center uppercase text-lg font-medium'>
+      <footer className='relative h-[90px] z-20 flex justify-center items-center uppercase text-lg font-medium'>
         <p>Jose Fernandez | Photography Portfolio</p>
       </footer>
 
