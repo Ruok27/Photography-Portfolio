@@ -16,12 +16,12 @@ import 'lightgallery/css/lg-thumbnail.css';
 import lgThumbnail from 'lightgallery/plugins/thumbnail';
 import lgZoom from 'lightgallery/plugins/zoom';
 
-import ocean1 from "../app/ocean1.jpg"
-import ocean2 from "../app/ocean2.jpg"
-import ocean3 from "../app/ocean3.jpg"
-import ocean4 from "../app/ocean4.jpg"
-import ocean5 from "../app/ocean5.jpg"
-import ocean6 from "../app/ocean6.jpg"
+import image1 from "../app/image1.jpg"
+import image2 from "../app/image2.jpg"
+import image3 from "../app/image3.jpg"
+import image4 from "../app/image4.jpg"
+import image5 from "../app/image5.jpg"
+import image6 from "../app/image6.jpg"
 
 import type { LightGallery } from 'lightgallery/lightgallery';
 //import { LightGallery } from 'lightgallery/lightgallery';
@@ -48,23 +48,24 @@ const tabs = [
 
   {
 
-    key: 'oceans',
-    display: "Oceans"
+    key: 'category 2',
+    display: "Category 2"
 
   },
   {
 
-    key: 'forests',
-    display: "Forests"
+    key: 'category 3',
+    display: "Category 3"
 
   }
 ];
 
 
 const images = [
-  ocean1, ocean2, ocean3, ocean4, ocean5, ocean6
+  image1, image2, image3, image4, image5, image6
 
 ]
+
 
 
 export default function Home() {
@@ -201,8 +202,8 @@ export default function Home() {
                 </LightGalleryComponent>
 
               </Tab.Panel>
-              <Tab.Panel>Oceans</Tab.Panel>
-              <Tab.Panel>Forests</Tab.Panel>
+              <Tab.Panel>Category 2</Tab.Panel>
+              <Tab.Panel>Category 3</Tab.Panel>
             </Tab.Panels>
           </Tab.Group>
         </div>
